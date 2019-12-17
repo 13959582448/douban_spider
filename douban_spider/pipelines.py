@@ -8,9 +8,9 @@ import json
 
 class DoubanSpiderPipeline(object):
     def __init__(self):
-        self.file=open(r"/home/huangchenhan/data.txt","w",encoding="utf-8")
-        self.word=open(r"/home/huangchenhan/word.txt","w",encoding="utf-8")
-        self.users=open(r"/home/huangchenhan/user.txt","w",encoding="utf-8")
+        self.file=open(path1,"w",encoding="utf-8")
+        self.word=open(path2,"w",encoding="utf-8")
+        self.users=open(path3,"w",encoding="utf-8")
     def process_item(self, item, spider):
         json.dump(dict(item),fp=self.file,ensure_ascii=False)
         self.word.write(item["title"]+"\n")
